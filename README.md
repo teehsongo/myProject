@@ -19,3 +19,8 @@ Useful for quick financial estimates and learning how to build CLI tools in Pyth
 1. Clone the repository:
    ```bash
    git clone https://github.com/teehsongo/financial-calculator.git
+
+## Credits
+- **[Teehsongo](https://github.com/teehsongo)** — Sole author of this project.
+
+   
