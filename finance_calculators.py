@@ -22,6 +22,11 @@ if calc == "investment" or calc == "INVESTMENT" or calc == "Investment":
         print("Simple interest")
         # Calculate the amount using the simple interest formula
         A = P * (1 + r * t)
+        # Where:
+        # A = total amount, 
+        # P = principal amount,
+        # r = rate of interest, 
+        # t = time the money is invested for.
         print("Your investment after {} years will be R{}".format(t, A))
         a = P * (1 + 0.08 * 20)
         # a represent the amount after 20 years
