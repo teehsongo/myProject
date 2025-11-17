@@ -1,6 +1,18 @@
 """The Python program providing access to different financial calculators."""
 import math
+
+
+def calculate_compound_interest(P, r, t):
+    """
+    Calculate compound interest using the formula:
+    A = P * (1 + r) ** t
+    Returns the final amount A.
+    """
+    return P * math.pow((1 + r), t)
+
 # Allow the user to choose a calculation.
+
+
 print("Choose which calculation you want to do:")
 print(" Investment - to calculate the interest you'll earn on your investment")
 print(" Bond - to calculate the amount you'll have to pay on a home loan")
@@ -36,13 +48,11 @@ if calc == "investment" or calc == "INVESTMENT" or calc == "Investment":
         print("The difference will be R{}".format(difference))
     elif interest == 2:
         print("Compound interest")
-        # Calculate the amount using compound interest formula
-        A = P * math.pow((1 + r), t)
+        # Use the new compound interest function
+        A = calculate_compound_interest(P, r, t)
         print("Your investment after {} years will be R{}.".format(t, A))
-        a = P * math.pow((1 + 0.08), 20)
-        # a represents the amount after 20 years
+        a = calculate_compound_interest(P, 0.08, 20)
         difference = a - A
-        # A represents the amount after the t years
         print("Your investment in 20 years at 8% will be R{}".format(a))
         print("The difference will be R{}".format(difference))
     else:
